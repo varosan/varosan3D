@@ -46,7 +46,7 @@ nav ul.mobile li a {
     font-size:1.1rem ;
     color: white;
 }
-.actual {
+nav ul.desktop li a.actual {
     color:#F5DD90;
 }
 
