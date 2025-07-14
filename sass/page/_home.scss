@@ -1,0 +1,381 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+
+header {
+    background-color: $fondo-header ;
+    padding: 5%;
+    text-align: center;
+    @include flex;
+    nav{
+        ul.desktop{
+            display: none;
+        }
+    }
+    img.colorcito {
+        background-color: transparent;
+        border: none;
+    }
+    img.colorcito:hover{
+        background-color:$hover;
+    }
+    img.colorcito:visited{
+        background-color: $visited;
+    }
+
+}
+nav#navegacion{
+    ul.mobile{
+        background-color:$fondo-header;
+        color: white;
+        width: 90%;
+
+    }
+
+}
+nav {
+    ul{
+        li{
+            list-style: none;
+            @include font ("Poppins",400,normal)
+        }
+    }
+    ul.mobile{
+        li{
+            a{
+                text-decoration: none;
+                font-size:1.1rem ;
+                color: white;
+            }
+        }
+    
+    }
+    ul.desktop{
+        li{
+            a.actual{
+                color: $actual;
+            }
+        }
+    }
+}
+section#bienvenida{
+    width: 100%;
+    background-color:$actual;
+    padding: 5%;
+    h1{
+        font-size: 3rem;
+        color: $color-titulo;
+        @include font ("DM Serif Text",400,normal);
+    }
+    
+    p{
+        font-size:1.2rem;
+        color: $color-parrafo;
+        @include font ("Poppins", 400,normal);
+    }
+}
+
+.bounce-in-left{
+    animation:bounce-in-left 1.1s both
+}
+
+@keyframes bounce-in-left{
+    0%{transform:translateX(-600px);animation-timing-function:ease-in;opacity:0}38%{transform:translateX(0);animation-timing-function:ease-out;opacity:1}55%{transform:translateX(-68px);animation-timing-function:ease-in}72%{transform:translateX(0);animation-timing-function:ease-out}81%{transform:translateX(-28px);animation-timing-function:ease-in}90%{transform:translateX(0);animation-timing-function:ease-out}95%{transform:translateX(-8px);animation-timing-function:ease-in}100%{transform:translateX(0);animation-timing-function:ease-out}
+}
+
+section.landing {
+    @include fondo;
+    background-image: url(../assets/fondo_01.jpg);
+}
+section.landing-b {
+    @include fondo;
+    background-image: url(../assets/fondo-productos.jpg);
+}
+section.landing-c {
+    @include fondo;
+    background-image: url(../assets/fondo-galeria.jpg);
+}
+section.landing-d {
+    @include fondo;
+    background-image: url(../assets/fondo-faq.jpg);
+}
+section.landing-e {
+    @include fondo;
+    background-image: url(../assets/fondo-contacto.jpg);
+}
+.titulo {
+    font-size: 2rem;
+    color: $color-titulo;
+    margin: 20px;
+    @include font ("DM Serif Text",400,normal);
+}
+section#productos {
+    background-color: $fondo-productos;
+    padding: 5%;
+    text-align: center;
+    width: 100%;
+}
+div.box {
+    padding: 2%;
+    margin: 20px;
+    img {
+        width: 300px;
+        box-shadow:5px 5px 10px rgba(255,0,0,0.3);
+    }
+    h3 {
+        @include font ("Poppins", 700,normal);
+        font-size:1.2rem;
+        color: white;
+        margin: 10px;
+    }
+    p {
+        @include font ("Poppins", 400,normal);
+        font-size:1.2rem;
+        color: white;
+        margin: 10px;
+    }
+}
+
+.el_button {
+    background-color:$button;
+    color: white;
+    border: none;
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+.el_button:hover {
+    color: white;
+    transform: translateX(-3px) translateY(-3px);
+    box-shadow:5px 5px 10px rgba(255,0,0,0.3);
+
+
+}
+div.texts_left {
+    margin-bottom: 20px;
+}
+section#quien {
+    width: 100%;
+    background-color:#f5dd90;
+    padding: 2%;
+    p{
+        @include font ("Poppins", 400,normal);
+        font-size: 1.2rem;
+        color: $color-parrafo;
+        margin-bottom: 20px;
+    }
+}
+footer {
+    background: $fondo-footer;
+    text-align: center;
+    padding: 2%;
+
+    .logo:hover{
+            transform: translateX(-3px) translateY(-3px);
+    }
+    div.rrss {
+        img{
+            margin: 10px;
+            transition: all 0.2s ease;
+        }
+        img:hover {
+           color: red;
+           transform: translateX(-3px) translateY(-3px);
+        }
+    }
+}
+h1.titulo_principal {
+    text-align: center;
+    padding: 2%;
+    color: $color-titulo;
+    font-size: 3rem;
+    @include font ("DM Serif Text",400,normal);
+
+}
+.titulo_fondo_blanco {
+    text-align: center;
+    padding: 2%;
+    font-size: 2rem;
+    color: $color-titulo;
+    @include font ("DM Serif Text",400,normal);
+}
+section#destacado {
+    background-color: $color-titulo;
+    padding:5%;
+    text-align: center;
+    img{
+        width:100%;
+        padding: 2.5%;
+    }
+}
+
+div.box_destacada {
+    @include column;
+}
+div.box_destacada{
+    h3{
+        color: white;
+        font-size: 1.4rem;
+        @include font ("Poppins", 700,normal);
+      
+
+    }
+    p.precio_destacado {
+        @include font ("Poppins", 700,normal);
+        color: white;
+        font-size: 1.2rem;
+    }
+    p.texto_destacado {
+        @include font ("Poppins", 400,normal);
+        color: white;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+}
+/*estilos galeria*/
+
+section#galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding:2%;
+    background-color: $fondo-galeria;
+    img {
+        @include img;
+    }
+    .img-a,.img-f{
+        grid-column: 1/3;
+    }
+}
+/*estilos faq*/
+
+section#faq {
+    h3 {
+        @include font ("Poppins", 700,normal);
+        color: $color-parrafo;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    ul{
+        li{
+            list-style: none;
+        }
+        a{
+            @include font ("Poppins", 400,normal);
+            font-size: 1.2rem;
+            color: $button;
+            text-decoration: none;
+        }
+    }
+}
+/*estilo contacto*/
+section#contact {
+    background-color:$fondo-footer;
+    padding: 2%;
+    h3{
+        @include font ("Poppins", 700,normal);
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    p{
+      @include font ("Poppins", 400,normal);
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:786px){
+    header {
+        @include flex;
+        column-gap: 5%;
+        nav {
+            width:50%;
+            ul {
+                @include flex;
+            }
+                ul.mobile{
+                    display: none;
+                }
+                ul.desktop{
+                    @include flex;
+                    
+                }
+                ul.desktop
+                    li{
+                        a{
+                            text-decoration: none;
+                            font-size:1.1rem ;
+                            color: white;
+                        }
+                    }
+                img.colorcito {
+                        display: none;
+            
+            }
+        }
+       
+    }
+
+section#productos {
+    @include flexwrap (flex,space-around,wrap);
+}
+section#quien, footer {
+    @include flex;
+}
+section#destacado {
+    background-color:$fondo-header;
+    padding:1.5%;
+        div.box_destacada {
+        @include grid;
+        h3 {
+            font-size:1.4rem;
+            text-align: left;
+            margin-top: 30px;
+        }
+        p.precio_destacado{
+            font-size: 1rem;
+            text-align: left;
+
+        }
+        p.texto_destacado {
+            font-size: 0.8rem;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+    }
+    div.txt-dst{
+        padding: 1.5%;
+        @include column;
+    }
+}
+
+section#galeria {
+    @include rows (grid,1fr 1fr 1fr,150px 250px 150px,10px);
+    padding: 5%;
+    img {
+        @include img;
+    }
+    .img-a {
+    grid-column: 1/2;
+    }
+    .img-d{
+        grid-column: 1/4;
+    }
+    .img-f{
+        grid-column:2/4
+    }
+}
+
+section#contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    div.datos {
+        @include column;
+    }
+}
+
+}
