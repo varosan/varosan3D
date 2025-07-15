@@ -61,12 +61,7 @@ section#bienvenida{
     width: 100%;
     background-color:$actual;
     padding: 5%;
-    h1{
-        font-size: 3rem;
-        color: $color-titulo;
-        @include font ("DM Serif Text",400,normal);
-    }
-    
+
     p{
         font-size:1.2rem;
         color: $color-parrafo;
@@ -80,6 +75,16 @@ section#bienvenida{
 
 @keyframes bounce-in-left{
     0%{transform:translateX(-600px);animation-timing-function:ease-in;opacity:0}38%{transform:translateX(0);animation-timing-function:ease-out;opacity:1}55%{transform:translateX(-68px);animation-timing-function:ease-in}72%{transform:translateX(0);animation-timing-function:ease-out}81%{transform:translateX(-28px);animation-timing-function:ease-in}90%{transform:translateX(0);animation-timing-function:ease-out}95%{transform:translateX(-8px);animation-timing-function:ease-in}100%{transform:translateX(0);animation-timing-function:ease-out}
+}
+section.banner{
+    text-align: center;
+    padding-top:180px;
+        h1{
+        font-size: 3rem;
+        color: $color-titulo;
+        @include font ("DM Serif Text",400,normal);
+        color: white;
+    }
 }
 
 section.landing {
@@ -164,6 +169,23 @@ section#quien {
         font-size: 1.2rem;
         color: $color-parrafo;
         margin-bottom: 20px;
+    }
+    a{
+        display: block;
+        width: 250px;
+        height: 50px;
+        background-color: $button;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        @include font ("Poppins", 400,normal);
+        padding-top: 15px;
+        border-radius: 50px;
+
+    }
+    a:hover {
+        transform: translateX(-3px) translateY(-3px);
+        box-shadow:5px 5px 10px rgba(255,0,0,0.3);
     }
 }
 footer {
@@ -304,6 +326,19 @@ section#contact {
         grid-column:2/4
     }
 }
+section.banner{
+
+    text-indent: -200%;
+        h1{
+        font-size: 3rem;
+        color: $color-titulo;
+        @include font ("DM Serif Text",400,normal);
+        color: white;
+    }
+}
+section.banner:hover {
+        text-indent: 0;
+    }
 }
 
 @media screen and (min-width:786px){

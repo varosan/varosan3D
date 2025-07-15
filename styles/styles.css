@@ -58,13 +58,6 @@ section#bienvenida {
   background-color: #F5DD90;
   padding: 5%;
 }
-section#bienvenida h1 {
-  font-size: 3rem;
-  color: #f76c5e;
-  font-family: "DM Serif Text";
-  font-weight: 400;
-  font-style: normal;
-}
 section#bienvenida p {
   font-size: 1.2rem;
   color: #324376;
@@ -113,6 +106,19 @@ section#bienvenida p {
     animation-timing-function: ease-out;
   }
 }
+section.banner {
+  text-align: center;
+  padding-top: 180px;
+}
+section.banner h1 {
+  font-size: 3rem;
+  color: #f76c5e;
+  font-family: "DM Serif Text";
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
 section.landing {
   width: 100%;
   height: 400px;
@@ -227,6 +233,24 @@ section#quien p {
   font-size: 1.2rem;
   color: #324376;
   margin-bottom: 20px;
+}
+section#quien a {
+  display: block;
+  width: 250px;
+  height: 50px;
+  background-color: #586ba4;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 15px;
+  border-radius: 50px;
+}
+section#quien a:hover {
+  transform: translateX(-3px) translateY(-3px);
+  box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.3);
 }
 
 footer {
@@ -386,6 +410,20 @@ section#contact p {
   }
   section#galeria .img-f {
     grid-column: 2/4;
+  }
+  section.banner {
+    text-indent: -200%;
+  }
+  section.banner h1 {
+    font-size: 3rem;
+    color: #f76c5e;
+    font-family: "DM Serif Text";
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+  }
+  section.banner:hover {
+    text-indent: 0;
   }
 }
 @media screen and (min-width: 786px) {
