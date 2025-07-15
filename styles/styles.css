@@ -365,35 +365,64 @@ section#contact p {
   text-align: center;
 }
 
+@media screen and (min-width: 576px) {
+  section#galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 250px 150px;
+    gap: 5px;
+    padding: 5%;
+  }
+  section#galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  section#galeria .img-c {
+    grid-column: 1/2;
+  }
+  section#galeria .img-d {
+    grid-column: 2/4;
+  }
+  section#galeria .img-f {
+    grid-column: 2/4;
+  }
+}
 @media screen and (min-width: 786px) {
+  body {
+    background: white;
+  }
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 5%;
   }
-  header nav {
+  header nav#navegacion {
     width: 50%;
   }
-  header nav ul {
+  header nav#navegacion ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  header nav ul.mobile {
+  header nav#navegacion ul.mobile {
     display: none;
   }
-  header nav ul.desktop {
+  header nav#navegacion ul.desktop {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  header nav ul.desktop li a {
+  header nav#navegacion ul.desktop li a {
     text-decoration: none;
     font-size: 1.1rem;
     color: white;
   }
-  header nav img.colorcito {
+  header nav#navegacion ul.desktop li a:hover {
+    color: #324376;
+  }
+  header nav#navegacion img.colorcito {
     display: none;
   }
   section#productos {
@@ -438,9 +467,9 @@ section#contact p {
   }
   section#galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 250px 150px;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 250px 150px;
+    gap: 15px;
     padding: 5%;
   }
   section#galeria img {
@@ -448,14 +477,12 @@ section#contact p {
     height: 100%;
     object-fit: cover;
   }
-  section#galeria .img-a {
-    grid-column: 1/2;
-  }
-  section#galeria .img-d {
-    grid-column: 1/4;
+  section#galeria .img-c {
+    grid-column: 4/5;
   }
   section#galeria .img-f {
-    grid-column: 2/4;
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
   section#contact {
     display: grid;
