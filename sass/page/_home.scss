@@ -2,10 +2,11 @@
 @use "../abstracts/mixin" as *;
 
 header {
-    background-color: $fondo-header ;
-    padding: 5%;
+    background-color: $fondo-header;
+    
     text-align: center;
     @include flex;
+
     nav{
         ul.desktop{
             display: none;
@@ -189,9 +190,9 @@ section#quien {
     }
 }
 footer {
+    @include column;
     background: $fondo-footer;
     text-align: center;
-    padding: 2%;
 
     .logo:hover{
             transform: translateX(-3px) translateY(-3px);
@@ -310,6 +311,40 @@ section#contact {
 }
 @media screen and (min-width:576px){
 
+    header {
+        @include column;
+        column-gap: 5%;
+
+        nav#navegacion {
+            width:90%;
+
+                ul.mobile{
+                    display: none;
+                }
+                ul.desktop{
+                    @include flex;
+                    
+                }
+                ul.desktop
+                    li{
+                        a{
+                            text-decoration: none;
+                            font-size:1.1rem ;
+                            color: white;
+                        }
+                        a:hover {
+                            color:$color-parrafo;
+                        }
+                    }
+
+                img.colorcito {
+                        display: none;
+            
+            }
+        }
+       
+    }
+
     section#galeria {
         @include rows (grid,1fr 1fr 1fr,150px 250px 150px,5px);
         padding: 5%;
@@ -339,27 +374,28 @@ section.banner{
 section.banner:hover {
         text-indent: 0;
     }
+
+footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
 }
 
-@media screen and (min-width:786px){
-    body {
-        background:white;
-    }
-    header {
-        @include flex;
-        column-gap: 5%;
+
+
+@media screen and (min-width:1024px){
+
+   header#horizon{
+        padding: 2%;
+        flex-direction: row;
+        
         nav#navegacion {
-            width:50%;
-            ul {
-                @include flex;
-            }
-                ul.mobile{
-                    display: none;
-                }
-                ul.desktop{
-                    @include flex;
-                    
-                }
+            width:60%;
+
+
+
                 ul.desktop
                     li{
                         a{
@@ -383,7 +419,7 @@ section.banner:hover {
 section#productos {
     @include flexwrap (flex,space-around,wrap);
 }
-section#quien, footer {
+section#quien {
     @include flex;
 }
 section#destacado {

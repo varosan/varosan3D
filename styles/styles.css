@@ -12,11 +12,10 @@ html {
 
 header {
   background-color: #f76c5e;
-  padding: 5%;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 header nav ul.desktop {
   display: none;
@@ -254,9 +253,11 @@ section#quien a:hover {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   background: #324376;
   text-align: center;
-  padding: 2%;
 }
 footer .logo:hover {
   transform: translateX(-3px) translateY(-3px);
@@ -390,6 +391,34 @@ section#contact p {
 }
 
 @media screen and (min-width: 576px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    column-gap: 5%;
+  }
+  header nav#navegacion {
+    width: 90%;
+  }
+  header nav#navegacion ul.mobile {
+    display: none;
+  }
+  header nav#navegacion ul.desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  header nav#navegacion ul.desktop li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white;
+  }
+  header nav#navegacion ul.desktop li a:hover {
+    color: #324376;
+  }
+  header nav#navegacion img.colorcito {
+    display: none;
+  }
   section#galeria {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -425,42 +454,29 @@ section#contact p {
   section.banner:hover {
     text-indent: 0;
   }
+  footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
-@media screen and (min-width: 786px) {
-  body {
-    background: white;
+@media screen and (min-width: 1024px) {
+  header#horizon {
+    padding: 2%;
+    flex-direction: row;
   }
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 5%;
+  header#horizon nav#navegacion {
+    width: 60%;
   }
-  header nav#navegacion {
-    width: 50%;
-  }
-  header nav#navegacion ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  header nav#navegacion ul.mobile {
-    display: none;
-  }
-  header nav#navegacion ul.desktop {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  header nav#navegacion ul.desktop li a {
+  header#horizon nav#navegacion ul.desktop li a {
     text-decoration: none;
     font-size: 1.1rem;
     color: white;
   }
-  header nav#navegacion ul.desktop li a:hover {
+  header#horizon nav#navegacion ul.desktop li a:hover {
     color: #324376;
   }
-  header nav#navegacion img.colorcito {
+  header#horizon nav#navegacion img.colorcito {
     display: none;
   }
   section#productos {
@@ -468,10 +484,10 @@ section#contact p {
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  section#quien, footer {
+  section#quien {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   section#destacado {
     background-color: #f76c5e;
