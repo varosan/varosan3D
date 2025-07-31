@@ -31,6 +31,9 @@ header img.colorcito:visited {
   background-color: #324376;
 }
 
+nav#navegacion {
+  padding-top: 15px;
+}
 nav#navegacion ul.mobile {
   background-color: #f76c5e;
   color: white;
