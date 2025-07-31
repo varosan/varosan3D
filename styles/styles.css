@@ -169,13 +169,13 @@ section.landing-e {
 
 section#productos {
   background-color: #f68e5f;
-  padding: 5%;
   text-align: center;
   width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 div.box {
-  padding: 2%;
   margin: 20px;
 }
 div.box img {
@@ -348,6 +348,9 @@ section#galeria .img-a, section#galeria .img-f {
 }
 
 /*estilos faq*/
+section#faq {
+  padding: 2%;
+}
 section#faq h3 {
   font-family: "Poppins";
   font-weight: 700;
@@ -459,6 +462,12 @@ section#contact p {
     align-items: center;
     justify-content: space-between;
   }
+  section#productos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 @media screen and (min-width: 1024px) {
   header#horizon {
@@ -478,11 +487,6 @@ section#contact p {
   }
   header#horizon nav#navegacion img.colorcito {
     display: none;
-  }
-  section#productos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
   }
   section#quien {
     display: flex;

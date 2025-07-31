@@ -116,12 +116,12 @@ section.landing-e {
 }
 section#productos {
     background-color: $fondo-productos;
-    padding: 5%;
     text-align: center;
     width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 div.box {
-    padding: 2%;
     margin: 20px;
     img {
         width: 300px;
@@ -274,6 +274,7 @@ section#galeria {
 /*estilos faq*/
 
 section#faq {
+    padding: 2%;
     h3 {
         @include font ("Poppins", 700,normal);
         color: $color-parrafo;
@@ -381,6 +382,11 @@ footer {
         justify-content: space-between;
     }
 
+    section#productos {
+        @include flex;
+        flex-wrap: wrap;
+    }
+
 }
 
 
@@ -416,9 +422,6 @@ footer {
        
     }
 
-section#productos {
-    @include flexwrap (flex,space-around,wrap);
-}
 section#quien {
     @include flex;
 }
